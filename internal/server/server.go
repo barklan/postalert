@@ -17,8 +17,8 @@ import (
 type AlertInput struct {
 	Namespace string `path:"namespace" maxLength:"30" example:"myservice" doc:"Namespace for alerts" required:"true"`
 	Body      struct {
-		Level   string `path:"level"`
-		Message string `path:"message"`
+		Level   string `json:"level"`
+		Message string `json:"message"`
 	}
 }
 

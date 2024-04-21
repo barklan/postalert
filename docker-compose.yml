@@ -1,7 +1,7 @@
 ---
 services:
   postalert:
-    image: "barklan/postalert:latest"
+    image: "barklan/postalert:v0.0.1"
     build:
       context: .
       dockerfile: Dockerfile
