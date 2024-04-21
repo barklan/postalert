@@ -1,0 +1,14 @@
+---
+services:
+  postalert:
+    image: "barklan/postalert:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - POSTALERT_TG_BOT_KEY=${POSTALERT_TG_BOT_KEY}
+      - POSTALERT_TG_CHAT_ID=${POSTALERT_TG_CHAT_ID}
+    env_file:
+      - ./.env
+    ports:
+      - 8000:8000
